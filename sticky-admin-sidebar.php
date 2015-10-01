@@ -3,7 +3,7 @@
 Plugin Name: Sticky Admin Sidebar
 Plugin URI:  https://github.com/jgillyon/sticky-admin-sidebar
 Description: Sticks the post sidebar in wp-admin so it's always in view
-Version:     0.1
+Version:     1.0
 Author:      Jason Gillyon
 Author URI:  http://jasongillyon.co.uk
  */
@@ -22,6 +22,6 @@ function sticky_admin_sidebar_script ( $hook ) {
     }
 
     // Load the script
-    wp_enqueue_script( 'sticky_admin_sidebars', plugin_dir_url( __FILE__ ) . 'assets/sticky-admin-sidebar.js', array( 'jquery' ) );
+    wp_enqueue_script( 'sticky_admin_sidebars', plugin_dir_url( __FILE__ ) . 'sticky-admin-sidebar.js', array( 'jquery' ) );
 }
 add_action( 'admin_enqueue_scripts', 'sticky_admin_sidebar_script' );
