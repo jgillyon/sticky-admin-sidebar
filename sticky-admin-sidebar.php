@@ -3,7 +3,7 @@
 Plugin Name: Sticky Admin Sidebar
 Plugin URI:  https://github.com/jgillyon/sticky-admin-sidebar
 Description: Sticks the post sidebar in wp-admin so it's always in view
-Version:     1.0
+Version:     1.0.2
 Author:      Jason Gillyon
 Author URI:  http://jasongillyon.co.uk
  */
@@ -16,8 +16,8 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
  * @return mixed
  */
 function sticky_admin_sidebar_script ( $hook ) {
-	// Only load on new or edit post screen
-    if ( !in_array( $hook, array( 'post.php', 'post-new.php' ) ) ) {
+	// Only load on new or edit post screen or acf options pages
+    if ( !in_array( $hook, array( 'post.php', 'post-new.php' ) ) && substr($hook, 0, 24) != 'options_page_acf-options' && substr($hook, 0, 25) != 'toplevel_page_acf-options' ) {
         return;
     }
 

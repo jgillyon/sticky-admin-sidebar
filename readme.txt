@@ -26,6 +26,10 @@ Please contact me at http://jasongillyon.co.uk/contact and I'll do my best to fi
 2. With the plugin, the publish button is always visible
 
 == Changelog ==
+= 1.0.1 =
+* Enable on ACF top level options pages.
+= 1.0.1 =
+* Enable on ACF options pages.
 = 1.0 =
 * Tidy up code and documentation.
 = 0.1 =
